@@ -1,13 +1,145 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(224, 45, 75);
+  margin: 30px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: grid;
+  grid-template-columns: 60% calc(40% - 30px);
+  gap: 30px;
+  margin: 30px;
+}
+.container div {
+  border-radius: 6px;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 30px;
+}
+.menu-item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.menu-item .name {
+  color: rgb(222, 192, 102);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.menu-item .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.menu-item button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(246, 239, 231);
+  margin-bottom: 10px;
+}
+.menu-item .quantity {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.menu-item .quantity button {
+  width: 50px;
+  font-weight: bold;
+}
+.menu-item .quantity span {
+  padding: 10px;
+}
+.cart-list {
+  max-width: 100%;
+  background-color: rgb(246, 239, 231);
+  padding: 30px;
+}
+.cart-list h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+.cart-item .all-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.cart-item .info {
+  display: flex;
+}
+.cart-item .info div {
+  margin-right: 5px;
+}
+.cart-item .all-info .name {
+  color: rgb(222, 192, 102);
+  font-weight: bold;
+}
+.cart-item button.delete-item {
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+.cart-total-price {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.checkout-button {
+  font-weight: bold;
+  width: 150px;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+}
+.black-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  padding: 30px;
+  border-radius: 6px;
+}
+.checkout h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.checkout-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-buttons button {
+  width: 47%;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+}
+.checkout-buttons button:last-child {
+  background-color: rgb(244, 64, 47);
+  color: white;
 }
